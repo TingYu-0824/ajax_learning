@@ -1,0 +1,66 @@
+* {  
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+li {
+    /* 列表样式清除 */
+    list-style: none;
+}
+body {
+    /* 背景 */
+    background-color: rgb(124, 124, 219);
+}
+.box{
+    width: 1700px;
+    height: 600px;
+    /* 超出盒子范围部分隐藏 */
+    overflow: hidden;
+    margin: 200px auto;
+    display: flex;
+    align-items: center;
+    
+}
+ .box li {
+     /* 定位相对 .text固定定位需要 */
+     position: relative;
+     /* 左浮动 */
+     float: left;
+     width: 260px;
+     height: 600px;
+ }
+
+ .box img {
+     /* 图片高度填满盒子高度 */
+     height: 100%;
+ }
+ .text {
+     /* 绝对定位 */
+     position: absolute;
+     /* 文字位置 */
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     /* 文字大小、宽度 */
+     font-size: 16px;
+     font-weight: bolder;
+     /* 盒子高度 */
+     height: 30px;
+     /* 行高，和盒子相同高度可以使文字垂直居中 */
+     line-height: 30px;
+     text-align: center;
+     color: aliceblue;
+     background-color: rgb(59, 55, 55, 0.5);
+ }
+    /* 鼠标悬停大盒子上时，大盒子内的li全部宽度小到200 */
+ .box:hover li {
+     width: 200px;
+     /* 样式变换速度 li:——>200 */
+     transition: 200ms;
+ }
+    /* 鼠标悬停li盒子上时，这个li宽度扩大到900 */
+ .box li:hover {
+     width: 900px;
+     /* 样式变换速度 li:——>900 */
+     transition: 0.3s;
+ }

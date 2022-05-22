@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,rgb(230, 159, 174)40%,rgb(144, 204, 231));
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav,.allnav,body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    position: relative;
+    background-color: #fff;
+    margin: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 9px 17px rgb(131, 128, 128,0.5);
+}
+.aspan {
+    position: absolute;
+    top: 50px;
+    left: 27px;
+    background-color: rgb(243, 229, 237);
+    height: 10px;
+    width: 35px;
+    border-radius: 10px;
+}
+.bspan {
+    position: absolute;
+    top: 27px;
+    left: 27px;
+    background-color: rgb(243, 229, 237);
+    height: 10px;
+    width: 35px;
+    border-radius: 10px;
+
+}
+.nav input:checked ~.aspan {
+    transform: rotate(45deg) translateY(-16.2px);
+    background-color: rgb(245, 135, 177);
+}
+.nav input:checked ~.bspan {
+    transform: rotate(-45deg) translateY(16.2px);
+    background-color: rgb(245, 135, 177);
+    
+}
+.nav input {
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.nav input:checked ~.allnav {
+    width: 600px;
+}
+.allnav {
+    width: 0;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    font-size: 25px;
+    font-weight: 800;
+}
+.allnav li {
+    list-style: none;
+    margin: 0 10px;
+}
+.allnav li a {
+    color: rgb(150, 186, 226);
+    text-decoration: none;
+}
+.allnav li:hover a {
+    color: rgb(105, 149, 202);
+}
